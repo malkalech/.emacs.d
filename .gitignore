@@ -1,0 +1,13 @@
+/.cache
+/abbrev
+/backup
+/elisp
+/elpa
+/jabber-history
+/quelpa
+/snippets
+/templates
+
+/ctags
+/eww-bookmarks
+/init_custom.el
