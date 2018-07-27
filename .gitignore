@@ -1,13 +1,3 @@
-/.cache
-/abbrev
-/backup
-/elisp
-/elpa
-/jabber-history
-/quelpa
-/snippets
-/templates
-
-/tags
-/eww-bookmarks
-/init_custom.el
+*
+!/.gitignore
+!/init.el
