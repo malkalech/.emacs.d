@@ -96,6 +96,11 @@
       ido-everywhere t
       ido-save-directory-list-file (locate-user-emacs-file ".cache/ido.last" ".ido.last"))
 (ido-mode 1)
+;; ido recentf
+(defun ido-find-recentf ()
+  "Find a recent file using Ido."
+  (interactive)
+  (find-file (ido-completing-read "Find recent file: " recentf-list)))
 
 ;;;; abbrev
 (unless (file-directory-p (concat user-emacs-directory "abbrev"))
@@ -118,7 +123,7 @@
 ;;;; Keybindings
 (define-key key-translation-map [?\C-h] [?\C-?])  ;; Use C-h to send a backspace
 (setq set-mark-command-repeat-pop t)  ;; C-u C-SPC C-SPC ... to cycle through the mark ring
-(define-key global-map "\C-cr" 'recentf-open-files)
+(define-key global-map "\C-cr" 'ido-find-recentf)
 
 ;;;; melpa / use-package / init-loader
 (when (require 'package nil t)
