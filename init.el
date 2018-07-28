@@ -121,9 +121,9 @@
 (when (require 'package nil t)
   (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
   (package-initialize)
+  (unless package-archive-contents (package-refresh-contents))
   ;; use-package
   (unless (package-installed-p 'use-package)
-    (package-refresh-contents)
     (package-install 'use-package))
   (if (file-directory-p (concat user-emacs-directory "inits"))
       ;; init-loader
