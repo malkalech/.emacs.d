@@ -9,6 +9,9 @@
 ;;;; Set custom-file
 (setq custom-file (concat user-emacs-directory "init_custom.el"))
 
+;;;; theme
+(when (version<= "24" emacs-version) (load-theme 'misterioso))
+
 ;;;; Frame appearance
 (menu-bar-mode 0)           ;; Menu bar
 (tool-bar-mode 0)           ;; Tool bar
@@ -128,10 +131,7 @@
   (if (file-directory-p (concat user-emacs-directory "inits"))
       ;; init-loader
       (use-package init-loader :ensure t
-        :config (init-loader-load))
-    ;; theme
-    (when (version<= "24" emacs-version)
-      (load-theme 'misterioso))))
+        :config (init-loader-load))))
 
 ;;;; Load custom-file
 (load custom-file t)
