@@ -100,7 +100,7 @@
 (defun ido-find-recentf ()
   "Find a recent file using Ido."
   (interactive)
-  (find-file (ido-completing-read "Find recent file: " recentf-list)))
+  (find-file (ido-completing-read "Recentf: " recentf-list)))
 
 ;;;; abbrev
 (unless (file-directory-p (concat user-emacs-directory "abbrev"))
