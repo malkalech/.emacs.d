@@ -9,11 +9,11 @@
 (setq custom-file (concat user-emacs-directory "init_custom.el"))
 
 ;;;; Frame appearance
-(menu-bar-mode 0)           ;; Menu bar
-(tool-bar-mode 0)           ;; Tool bar
-(scroll-bar-mode 0)         ;; Scroll bar
-(line-number-mode 1)        ;; Line number (mode line)
-(column-number-mode 1)      ;; Column number (mode line)
+;;(menu-bar-mode 0)       ;; Menu bar
+(tool-bar-mode 0)       ;; Tool bar
+(scroll-bar-mode 0)     ;; Scroll bar
+(line-number-mode 1)    ;; Line number (mode line)
+(column-number-mode 1)  ;; Column number (mode line)
 
 ;;;; Behavior
 (setq ring-bell-function 'ignore)    ;; No visible-bell
