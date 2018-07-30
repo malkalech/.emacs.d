@@ -2,15 +2,11 @@
 ;;; Commentary:
 ;;; Code:
 
-
 ;;;; Set user-emacs-directory
 (when load-file-name (setq user-emacs-directory (file-name-directory load-file-name)))
 
 ;;;; Set custom-file
 (setq custom-file (concat user-emacs-directory "init_custom.el"))
-
-;;;; theme
-(when (version<= "24" emacs-version) (load-theme 'misterioso))
 
 ;;;; Frame appearance
 (menu-bar-mode 0)           ;; Menu bar
